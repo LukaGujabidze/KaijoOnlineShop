@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Shop</title>
+</head>
+<body>
+    <h1 class="c-text"><b>Shop</b></h1>
+    <input  style="align-items: center;" type="text" placeholder="Search..">
+    <br>
+    <br>
+    <hr>
+    <p class="text"><b>1.</b> computer</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;" onclick="AddtoCart('computer')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>2.</b> Robot</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;" onclick="AddtoCart('robot')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>3.</b> Velchine</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;"onclick="AddtoCart('velchine')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>4.</b> Lamp</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;"onclick="AddtoCart('lamp')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>5.</b> I-Phone</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;"onclick="AddtoCart('i-phone')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>6.</b> Smart-Phone</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;"onclick="AddtoCart('smart-phone')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>7.</b> I-Pad</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button"  style="background-color: green;"onclick="AddtoCart('i-pad')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>8.</b> Ball</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;"onclick="AddtoCart('ball')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>9.</b> Kite</p>
+    <br>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;"onclick="AddtoCart('kite')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <p class="text"><b>10.</b> Bag</p>
+    <br>
+    <input type="color">color:
+    <br>
+    <br>
+    <button class="button" style="background-color: green;"onclick="AddtoCart('bag')">Add to Cart</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+<p id="demo" ></p>
+<br>
+<br>
+<br>
+<br>
+<button style="background-color: greenyellow; width: 35mm; height: 15mm;">Submit</button>
+<br>
+<br>
+<br>
+<a href="home.html">Go on main page?  <span style="color: red;">(Items will be not submited)</span></a>
+
+
+<script>
+    var price
+    price = 0
+    AddtoCart()
+    function AddtoCart(item){
+        price = price
+        var product_dict
+        product_dict = {}
+        
+        if (item === "computer"){
+            price = price + 1500
+            
+
+        }
+        else if (item === "robot"){
+            price = price + 500
+
+        }
+        else if (item === "velchine"){
+            price = price + 150000
+
+        }
+        else if (item === "lamp"){
+            price = price + 35
+
+        }
+        else if (item === "i-phone"){
+            
+            price = price + 1000
+
+        }
+        else if (item === "smart-phone"){
+            
+            price = price + 650
+
+        }
+        else if (item === "i-pad"){
+            
+            price = price + 740
+
+        }
+        else if (item === "ball"){
+            price = price + 5
+
+        }
+        else if (item === "kite"){
+            price = price + 25
+
+        }
+        else if (item === "bag"){
+            price = price + 10
+
+        }
+        else {
+            price = price + 0
+        }
+        
+        document.getElementById("demo").innerHTML = "Total: " + "$" + " " + price;
+        
+
+        
+    }
+    
+    
+
+</script>
+
+</body>
+</html>
